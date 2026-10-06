@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- الخلفية المتحركة -->
+<div class="bg" aria-hidden="true">
+  <div class="bg-blob bg-blob-1"></div>
+  <div class="bg-blob bg-blob-2"></div>
+  <div class="bg-blob bg-blob-3"></div>
+</div>
+
+<div class="app">
+  <header class="header glass">
+    <h1 id="appTitle">Notes</h1>
+    <div class="search-wrap">
+      <span class="search-icon" id="searchIcon" aria-hidden="true"></span>
+      <input type="search" id="search" placeholder="Search…">
+    </div>
+    <button id="langBtn" class="btn-icon" title="Language" aria-label="Language">
+      <span id="langIcon" aria-hidden="true"></span>
+    </button>
+    <button id="newNote" class="btn-primary">
+      <span id="newIcon" aria-hidden="true"></span>
+      <span id="newLabel">New note</span>
+    </button>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar glass">
+      <nav id="filters"></nav>
+    </aside>
+    <main id="main"></main>
+  </div>
+</div>
+
+<div id="toast" class="glass" aria-live="polite"></div>
+
+<script src="config.js"></script>
+<script src="storage.js"></script>
+<script src="icons.js"></script>
+<script src="strings.en.js"></script>
+<script src="strings.ar.js"></script>
+<script src="i18n.js"></script>
+<script src="notes.js"></script>
+<script src="render.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
